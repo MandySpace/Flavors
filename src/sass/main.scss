@@ -1,0 +1,21 @@
+@import "global";
+@import "utility";
+@import "footer";
+@import "nav";
+
+@import "./Home/hero";
+@import "./Home/cuisines";
+@import "./Home/features";
+@import "./Home/suggestedRecipes";
+@import "./Home/diets";
+@import "./Home/meals";
+
+@import "./Recipes/inputs";
+@import "./Recipes/recipesList";
+@import "./Recipes/recipesCard";
+@import "./Recipes/pagination";
+
+@import "./RecipeInfo/recipeHeader";
+@import "./RecipeInfo/recipeIngredients";
+@import "./RecipeInfo/recipeInstructions";
+@import "./RecipeInfo/similarRecipes";

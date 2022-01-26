@@ -1,0 +1,94 @@
+.footer {
+  background: #303030;
+  padding-bottom: 5rem;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 1px;
+      background: #fff;
+
+      position: absolute;
+      left: 50%;
+    }
+  }
+
+  .list {
+    list-style: none;
+    color: #fff;
+    display: flex;
+    gap: 4rem;
+    font-size: 1.6rem;
+
+    .list-item {
+      cursor: pointer;
+      will-change: transform;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .contact {
+    h3 {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  .name,
+  .email,
+  .message {
+    width: 25rem;
+    height: 3rem;
+    font-family: inherit;
+    color: #303030;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .name:focus,
+  .email:focus,
+  .message:focus {
+    outline: 2px solid var(--color-brown);
+  }
+
+  .message {
+    height: 7rem;
+    padding-top: 0.5rem;
+    resize: none;
+  }
+
+  .white {
+    margin-top: 2rem;
+    border: 2px solid #fff;
+    color: #fff;
+
+    @media screen and (hover: hover) {
+      &:hover {
+        background: #fff;
+        color: #303030;
+      }
+    }
+  }
+
+  .copyright {
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem;
+  }
+}

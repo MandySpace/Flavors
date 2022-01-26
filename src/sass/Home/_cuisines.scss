@@ -1,0 +1,70 @@
+.cuisine {
+  width: 100%;
+
+  &-title {
+    text-align: center;
+  }
+
+  &-component {
+    gap: 1rem;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    flex-shrink: 0;
+    width: 50px;
+    padding: 1rem;
+    box-sizing: content-box;
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 0.2s;
+
+    @media screen and (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-slides {
+    overflow-x: hidden;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  &-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+
+  .dots-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+
+    margin-top: 6rem;
+
+    .dot {
+      width: 12px;
+      aspect-ratio: 1;
+      background: #c4c4c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot-active {
+      background-color: var(--color-dark-brown);
+    }
+  }
+
+  &-cta {
+    display: block;
+    margin: 0 auto;
+    margin-top: 6rem;
+  }
+}

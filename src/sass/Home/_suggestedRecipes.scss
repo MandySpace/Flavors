@@ -1,0 +1,24 @@
+.suggestions {
+  h2 {
+    margin-bottom: 0rem;
+  }
+  .sub-heading {
+    font-size: 2rem;
+    color: #8c8c8c;
+    margin-bottom: 10rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .recipes {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  .cta {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rem;
+  }
+}

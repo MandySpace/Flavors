@@ -1,0 +1,125 @@
+.user-inputs {
+  // background: #0a0904;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    color: var(--color-brown);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .recipes-title {
+    // color: #fff;
+    text-align: center;
+  }
+
+  .sort-btn {
+    position: absolute;
+  }
+
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .search-bar {
+    width: 25rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-left: 4rem;
+  }
+
+  .filter-icon {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgb(241, 241, 241);
+    }
+  }
+
+  .calorie-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+    margin-top: 2rem;
+
+    .slider {
+      margin: 0 auto;
+      -webkit-appearance: none; /* Override default CSS styles */
+      appearance: none;
+      width: 30rem; /* Full-width */
+      height: 2px; /* Specified height */
+      background: #000000; /* Grey background */
+      outline: none; /* Remove outline */
+      color: rgb(0, 0, 0);
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 15px; /* Set a specific slider handle width */
+      height: 15px; /* Slider handle height */
+      border-radius: 50%;
+      background: #000000; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+    }
+
+    .slider::-moz-range-thumb {
+      width: 15px; /* Set a specific slider handle width */
+      height: 15px; /* Slider handle height */
+      background: #000000; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+    }
+  }
+
+  p {
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+  .search-btn {
+    padding: 0.5em 2em;
+    font-size: 1.2rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
+.filters {
+  margin: 0 auto;
+
+  .select-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .select-box {
+    height: 1.7rem;
+    width: 8rem;
+  }
+}
+.sort-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2rem;
+  width: 10rem;
+}

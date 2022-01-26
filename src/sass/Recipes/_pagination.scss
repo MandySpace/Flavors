@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin: 10rem 0;
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--color-dark-brown);
+    padding: 0.2em 0.5em;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: var(--color-brown);
+      color: #fff;
+    }
+  }
+
+  .active-btn {
+    background-color: var(--color-brown);
+    color: #fff;
+  }
+}

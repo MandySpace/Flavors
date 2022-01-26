@@ -1,0 +1,69 @@
+.features {
+  background-image: radial-gradient(
+    ellipse farthest-corner at center center,
+    rgba(190, 132, 88, 0.9) 0%,
+    rgba(156, 102, 59, 0.9) 100%
+  );
+  background-size: auto;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-color: rgba(0, 0, 0, 0);
+
+  .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .points {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .point {
+    display: flex;
+    gap: 4rem;
+
+    .svg {
+      width: 60px;
+      aspect-ratio: 1;
+    }
+
+    .description {
+      font-size: 2.063rem;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+  }
+
+  .image {
+    width: 30%;
+    position: relative;
+
+    img {
+      position: relative;
+      z-index: 1;
+
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .offset-frame {
+      width: 100%;
+      height: 99%;
+
+      position: absolute;
+      top: 8%;
+      left: 10%;
+      // z-index: -1;
+
+      outline: 8px solid var(--color-white);
+    }
+  }
+}

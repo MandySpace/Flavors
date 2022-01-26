@@ -1,0 +1,60 @@
+.diets {
+  background-image: radial-gradient(
+    ellipse farthest-corner at center center,
+    rgba(190, 132, 88, 0.9) 0%,
+    rgba(156, 102, 59, 0.9) 100%
+  );
+  background-size: auto;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+
+  h2,
+  h3,
+  p,
+  button {
+    color: inherit;
+  }
+
+  p {
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-container {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .img-container {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  height: 100vh;
+
+  &-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 115%;
+      height: inherit;
+      object-position: 50% 70%;
+    }
+  }
+
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--color-white);
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    &-title {
+      font-family: "Lato", sans-serif;
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 0.9;
+
+      width: 80%;
+
+      span {
+        font-style: italic;
+        color: var(--color-brown);
+      }
+    }
+
+    &-subtitle {
+      font-family: "Lato", sans-serif;
+      font-size: 2.625rem;
+      font-weight: 100;
+      font-style: italic;
+      line-height: 1.545;
+      margin-top: 6rem;
+      color: var(--color-white);
+    }
+
+    &-subtext {
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.65;
+      width: 35%;
+      margin-top: 2rem;
+      color: var(--color-off-white);
+    }
+
+    &-cta {
+      margin-top: 6rem;
+    }
+  }
+}

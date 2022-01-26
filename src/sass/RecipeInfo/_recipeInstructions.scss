@@ -1,0 +1,27 @@
+.recipe-ins {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    margin: 0;
+  }
+
+  ul {
+    width: max-content;
+  }
+
+  li {
+    max-width: 75ch;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--color-text-black);
+  }
+
+  .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+}

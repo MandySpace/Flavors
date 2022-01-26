@@ -1,23 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import "./sass/main.scss";
+import Home from "./Pages/Home";
+import Recipes from "./Pages/Recipes";
+import RecipeInfo from "./Pages/RecipeInfo";
+import Footer from "./Components/Footer";
+import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const [recipes, setRecipes] = useState(null);
+  const [cuisines, setCuisines] = useState("");
+  const [diets, setDiets] = useState("");
+  const [meals, setMeals] = useState("");
+
+  useEffect(() => {
+    localStorage.removeItem("suggestedRecipes");
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              setCuisines={setCuisines}
+              setDiets={setDiets}
+              setMeals={setMeals}
+            />
+          }
+        />
+        <Route
+          path="/recipes"
+          element={
+            <Recipes
+              recipes={recipes}
+              setRecipes={setRecipes}
+              setCuisines={setCuisines}
+              setDiets={setDiets}
+              setMeals={setMeals}
+              cuisines={cuisines}
+              meals={meals}
+              diets={diets}
+            />
+          }
+        />
+        <Route path="/recipes/*" element={<RecipeInfo />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.recipe-ing {
+  padding: 5rem 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  .ingredients {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: baseline;
+    justify-items: center;
+    gap: 2rem;
+
+    .ing {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}

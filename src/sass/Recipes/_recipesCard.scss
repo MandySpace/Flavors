@@ -1,0 +1,83 @@
+.recipe-card {
+  cursor: pointer;
+  flex: 1;
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+  }
+
+  @media screen and (hover: hover) {
+    &:hover .img-cover {
+      transform: scale(1.07);
+    }
+  }
+
+  h4 {
+    // display: inline-block;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    line-height: 1.1;
+    // background: #fff;
+    // color: var(--color-dark-grey);
+    font-size: 1.5rem;
+  }
+
+  .img-container {
+    width: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    // outline: 7px solid var(--color-dark-brown);
+    // outline-offset: 0.4rem;
+
+    box-shadow: 0 0 0 5px #fff, 0 0 0 10px var(--color-dark-brown);
+    // outline-offset: 0.4rem;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+
+  .svg-container {
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-content: center;
+
+    // justify-items: centers;
+
+    .svg {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      width: 32px;
+      aspect-ratio: 1;
+    }
+  }
+}
