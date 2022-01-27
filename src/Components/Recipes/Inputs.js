@@ -24,6 +24,7 @@ function Inputs({
   setMeals,
   diets,
   setDiets,
+  setIsLoading,
 }) {
   const [query, setQuery] = useState("");
 
@@ -34,6 +35,7 @@ function Inputs({
   const [maxCalories, setMaxCalories] = useState(2000);
 
   const fetchData = useCallback(async () => {
+    setIsLoading(true);
     const recipes = await request("recipes/complexSearch", {
       query: query,
       addRecipeInformation: true,
@@ -48,6 +50,7 @@ function Inputs({
 
     setNoOfRecipes(recipes.totalResults);
     setRecipes(recipes.results);
+    setIsLoading(false);
   }, [
     query,
     cuisines,
@@ -59,6 +62,7 @@ function Inputs({
     setNoOfRecipes,
     setRecipes,
     maxCalories,
+    setIsLoading,
   ]);
 
   useEffect(() => {

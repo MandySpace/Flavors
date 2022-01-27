@@ -21,6 +21,8 @@ function Recipes({
 
   const [noOfRecipes, setNoOfRecipes] = useState(0);
 
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <>
       <Nav />
@@ -37,8 +39,9 @@ function Recipes({
         cuisines={cuisines}
         meals={meals}
         diets={diets}
+        setIsLoading={setIsLoading}
       />
-      {recipes ? (
+      {!isLoading ? (
         <>
           <RecipesList recipes={recipes} />
           <Pagination

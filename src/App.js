@@ -5,6 +5,7 @@ import RecipeInfo from "./Pages/RecipeInfo";
 import Footer from "./Components/Footer";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import useScrollTop from "./Components/scrollTop";
 
 function App() {
   const [recipes, setRecipes] = useState(null);
@@ -15,6 +16,8 @@ function App() {
   useEffect(() => {
     localStorage.removeItem("suggestedRecipes");
   }, []);
+
+  useScrollTop(recipes);
 
   return (
     <div className="App">

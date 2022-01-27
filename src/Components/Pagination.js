@@ -1,8 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const offsetPage = [-2, -1, 0, 1, 2];
-
-let pages = [];
 
 function Pagination({
   activePage,
@@ -12,9 +10,10 @@ function Pagination({
 }) {
   const noOfPages = Math.ceil(noOfRecipes / RESULTS_PER_PAGE);
 
+  const pages = useRef([1, 2, 3, 4, 5]);
   useEffect(() => {
     let newOffset = -1;
-    pages = offsetPage.map((offset) => {
+    pages.current = offsetPage.map((offset) => {
       if (offset + activePage > noOfPages) return undefined;
       if (offset + activePage > 0) {
         return offset + activePage + 1 + newOffset;
@@ -23,7 +22,8 @@ function Pagination({
         return activePage + newOffset;
       }
     });
-    if (activePage === 2) pages = [1, 2, 3, 4, 5];
+
+    if (activePage === 2) pages.current = [1, 2, 3, 4, 5];
   }, [activePage, RESULTS_PER_PAGE, noOfPages, noOfRecipes]);
 
   const nextPageHandler = () => {
@@ -48,7 +48,7 @@ function Pagination({
           Prev
         </button>
       )}
-      {!pages.includes(1) && (
+      {!pages.current.includes(1) && (
         <>
           <button className="page-btn" onClick={() => setActivePage(1)}>
             {1}
@@ -56,7 +56,8 @@ function Pagination({
           <span>. . .</span>
         </>
       )}
-      {pages.map((page, i) => {
+
+      {pages.current.map((page, i) => {
         return (
           page && (
             <button
@@ -70,7 +71,7 @@ function Pagination({
           )
         );
       })}
-      {!pages.includes(noOfPages) && (
+      {!pages.current.includes(noOfPages) && (
         <>
           <span>. . .</span>
           <button className="page-btn" onClick={() => setActivePage(noOfPages)}>
