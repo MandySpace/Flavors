@@ -12,7 +12,7 @@
   .left-arrow,
   .right-arrow {
     flex-shrink: 0;
-    width: 50px;
+    width: 3.125rem;
     padding: 1rem;
     box-sizing: content-box;
     cursor: pointer;
@@ -28,6 +28,15 @@
         transform: scale(1);
       }
     }
+
+    @media screen and (max-width: 50em) {
+      width: 4rem;
+    }
+
+    @media screen and(max-width: 37.5em) {
+      width: 6rem;
+      padding: 3rem;
+    }
   }
 
   &-slides {
@@ -40,6 +49,11 @@
     display: flex;
     justify-content: space-between;
     gap: 6rem;
+
+    @media screen and (max-width: 37.5em) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .dots-container {
@@ -55,10 +69,22 @@
       background: #c4c4c4;
       border-radius: 50%;
       cursor: pointer;
+
+      @media screen and (max-width: 93.75em) {
+        width: 10px;
+      }
+
+      @media screen and (max-width: 75em) {
+        width: 8px;
+      }
     }
 
     .dot-active {
       background-color: var(--color-dark-brown);
+    }
+
+    @media screen and (max-width: 75em) {
+      gap: 5rem;
     }
   }
 

@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-
+  font-size: 1.2rem;
   margin: 10rem 0;
 
   button {
     background-color: transparent;
     border: none;
-    font-size: 1.2rem;
+    font-size: inherit;
     cursor: pointer;
     color: var(--color-dark-brown);
     padding: 0.2em 0.5em;
@@ -23,5 +23,17 @@
   .active-btn {
     background-color: var(--color-brown);
     color: #fff;
+  }
+
+  @media screen and (max-width: 125em) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 75em) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 50em) {
+    font-size: 2.5rem;
   }
 }

@@ -21,4 +21,12 @@
     margin: 0 auto;
     margin-top: 10rem;
   }
+
+  @media screen and (max-width: 37.5em) {
+    padding: 15rem 5rem;
+  }
+
+  @media screen and (max-width: 28em) {
+    padding: 15rem 10rem;
+  }
 }

@@ -12,6 +12,14 @@
 .max-width {
   max-width: 100rem;
   margin: 0 auto;
+
+  @media screen and (max-width: 50em) {
+    max-width: 120rem;
+  }
+
+  @media screen and (max-width: 43.75em) {
+    max-width: 110rem;
+  }
 }
 
 .btn-square {
@@ -75,6 +83,12 @@
     margin-top: 2rem;
   }
 
+  p {
+    @media screen and(max-width: 37.5em) {
+      display: none;
+    }
+  }
+
   .img-container {
     width: 100%;
     aspect-ratio: 1;
@@ -95,6 +109,14 @@
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+
+    @media screen and (max-width: 93.75em) {
+      box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--color-dark-brown);
+    }
+
+    @media screen and (max-width: 50em) {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--color-dark-brown);
+    }
   }
 }
 
@@ -102,6 +124,10 @@
   display: flex;
   align-items: center;
   gap: 6rem;
+
+  @media screen and (max-width: 28em) {
+    flex-direction: column;
+  }
 
   .image {
     flex-basis: 48%;
@@ -116,6 +142,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media screen and (max-width: 28em) {
+      order: 2;
+    }
 
     b {
       font-weight: 400;
@@ -147,7 +177,7 @@
     }
 
     .icon {
-      width: 42px;
+      width: 2.625rem;
       aspect-ratio: 1;
     }
   }

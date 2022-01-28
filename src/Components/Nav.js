@@ -8,11 +8,10 @@ function Nav() {
   return (
     <header className={`header ${location.pathname === "/" ? "hero-nav" : ""}`}>
       <div className="container max-width">
-        <div className="logo-box">
-          <div className="circle flex-center">
-            <h1 className="logo">Flavors</h1>
-          </div>
+        <div className="circle flex-center">
+          <h1 className="logo">Flavors</h1>
         </div>
+
         <div className="nav">
           <ul className="nav-list">
             <motion.li

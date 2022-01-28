@@ -15,12 +15,12 @@ function SearchBar({ setQuery, isFilterOn, setIsFilterOn }) {
         onChange={searchBarHandler}
         className="search-bar"
       />
-      <img
+      {/* <img
         src={isFilterOn ? filter_on_svg : filter_off_svg}
         alt="filter"
         className="filter-icon"
         onClick={() => setIsFilterOn((isFilterOn) => !isFilterOn)}
-      />
+      /> */}
     </div>
   );
 }

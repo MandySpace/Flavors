@@ -27,7 +27,7 @@
   }
 
   .img-container {
-    width: 300px;
+    width: 18.75rem;
     aspect-ratio: 1;
     border-radius: 50%;
     margin: 0 auto;
@@ -47,6 +47,14 @@
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+
+    @media screen and (max-width: 93.75em) {
+      box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--color-dark-brown);
+    }
+
+    @media screen and (max-width: 50em) {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--color-dark-brown);
+    }
   }
 
   .svg-container {
@@ -76,7 +84,7 @@
     .icon {
       display: flex;
       align-items: center;
-      width: 32px;
+      width: 2rem;
       aspect-ratio: 1;
     }
   }

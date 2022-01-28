@@ -28,7 +28,7 @@ function Inputs({
 }) {
   const [query, setQuery] = useState("");
 
-  const [isFilterOn, setIsFilterOn] = useState(false);
+  const [isFilterOn, setIsFilterOn] = useState(true);
 
   const [sortBy, setSortBy] = useState("");
 
