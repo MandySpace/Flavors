@@ -8,9 +8,7 @@ import {
   line2AnimBack,
   line3AnimBack,
   bg1Anim,
-  bg2Anim,
   bg1AnimBack,
-  bg2AnimBack,
   listMenuAnim,
 } from "../animations";
 import { Link } from "react-router-dom";
@@ -83,14 +81,14 @@ function Hamburger() {
                 />
               </Link>
             </li>
-            <li onClick={menuClickHandler}>
+            {/* <li onClick={menuClickHandler}>
               <Link to="/about">
                 <span>03.</span> About
                 <motion.div
                   className={`line ${pathname === "/about" ? "active" : ""}`}
                 />
               </Link>
-            </li>
+            </li> */}
           </motion.ul>
         )}
       </AnimatePresence>

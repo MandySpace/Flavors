@@ -31,14 +31,14 @@ function Nav() {
             >
               <Link to="/recipes">RECIPES</Link>
             </motion.li>
-            <motion.li
+            {/* <motion.li
               variants={navHoverAnim}
               initial="hidden"
               whileHover="hover"
               className="nav-item"
             >
               <Link to="/about-us">ABOUT US</Link>
-            </motion.li>
+            </motion.li> */}
           </ul>
         </div>
         <Hamburger />
