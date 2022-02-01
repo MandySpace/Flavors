@@ -28,8 +28,6 @@ function Inputs({
 }) {
   const [query, setQuery] = useState("");
 
-  const [isFilterOn, setIsFilterOn] = useState(true);
-
   const [sortBy, setSortBy] = useState("");
 
   const [maxCalories, setMaxCalories] = useState(2000);
@@ -79,11 +77,7 @@ function Inputs({
     <section className="user-inputs max-width">
       <h1 className="recipes-title">RECIPES</h1>
       <form onSubmit={requestRecipesHandler}>
-        <SearchBar
-          setQuery={setQuery}
-          isFilterOn={isFilterOn}
-          setIsFilterOn={setIsFilterOn}
-        />
+        <SearchBar setQuery={setQuery} />
         <SelectBox fields={sortFields} name="Sort By" setState={setSortBy} />
         {isFilterOn && (
           <Filters

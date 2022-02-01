@@ -1,7 +1,4 @@
-import filter_off_svg from "../../img/svgs/filter_off.svg";
-import filter_on_svg from "../../img/svgs/filter_on.svg";
-
-function SearchBar({ setQuery, isFilterOn, setIsFilterOn }) {
+function SearchBar({ setQuery }) {
   const searchBarHandler = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
@@ -15,12 +12,6 @@ function SearchBar({ setQuery, isFilterOn, setIsFilterOn }) {
         onChange={searchBarHandler}
         className="search-bar"
       />
-      {/* <img
-        src={isFilterOn ? filter_on_svg : filter_off_svg}
-        alt="filter"
-        className="filter-icon"
-        onClick={() => setIsFilterOn((isFilterOn) => !isFilterOn)}
-      /> */}
     </div>
   );
 }
