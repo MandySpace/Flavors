@@ -79,19 +79,18 @@ function Inputs({
       <form onSubmit={requestRecipesHandler}>
         <SearchBar setQuery={setQuery} />
         <SelectBox fields={sortFields} name="Sort By" setState={setSortBy} />
-        {isFilterOn && (
-          <Filters
-            setCuisines={setCuisines}
-            setMeals={setMeals}
-            setDiets={setDiets}
-            setSortBy={setSortBy}
-            maxCalories={maxCalories}
-            setMaxCalories={setMaxCalories}
-            cuisines={cuisines}
-            meals={meals}
-            diets={diets}
-          />
-        )}
+
+        <Filters
+          setCuisines={setCuisines}
+          setMeals={setMeals}
+          setDiets={setDiets}
+          setSortBy={setSortBy}
+          maxCalories={maxCalories}
+          setMaxCalories={setMaxCalories}
+          cuisines={cuisines}
+          meals={meals}
+          diets={diets}
+        />
       </form>
       <button className="btn-square search-btn" onClick={requestRecipesHandler}>
         SEARCH
