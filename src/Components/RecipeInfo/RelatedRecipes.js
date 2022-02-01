@@ -10,7 +10,6 @@ function RelatedRecipes({ id }) {
       number: 4,
     });
 
-    console.log(data);
     setSimilarRecipes(data);
   }, [id]);
 

@@ -1,5 +1,5 @@
 .recipe-ing {
-  padding: 5rem 0;
+  padding: 5rem;
 
   h2 {
     text-align: center;
@@ -7,10 +7,15 @@
 
   .ingredients {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, 10rem);
     align-items: baseline;
     justify-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 4rem;
+
+    // @media screen and (max-width: 50em) {
+    //   grid-template-columns: repeat(4, 1fr);
+    // }
 
     .ing {
       flex: 1;
@@ -18,6 +23,11 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+
+      img {
+        width: 10rem;
+        max-width: 80px;
+      }
     }
   }
 }

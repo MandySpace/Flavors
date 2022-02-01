@@ -8,6 +8,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 37.5em) {
+      justify-content: center;
+    }
+
     &::before {
       content: "";
       height: 100%;
@@ -16,6 +20,10 @@
 
       position: absolute;
       left: 50%;
+
+      @media screen and (max-width: 37.5em) {
+        display: none;
+      }
     }
   }
 
@@ -25,6 +33,11 @@
     display: flex;
     gap: 4rem;
     font-size: 1.6rem;
+
+    @media screen and (max-width: 37.5em) {
+      padding: 0;
+      gap: 6rem;
+    }
 
     .list-item {
       cursor: pointer;
@@ -39,6 +52,11 @@
 
   .contact {
     padding-right: 10rem;
+
+    @media screen and (max-width: 37.5em) {
+      display: none;
+    }
+
     h3 {
       color: #fff;
       margin-bottom: 2rem;

@@ -22,11 +22,17 @@
     margin-top: 10rem;
   }
 
-  @media screen and (max-width: 37.5em) {
-    padding: 15rem 5rem;
+  .description {
+    @media screen and (max-width: 40em) {
+      font-size: 1.4rem;
+    }
   }
 
-  @media screen and (max-width: 28em) {
-    padding: 15rem 10rem;
+  @media screen and (max-width: 62.5em) {
+    padding: 15rem 15rem;
+  }
+
+  @media screen and (max-width: 37.5em) {
+    padding: 10rem 5rem;
   }
 }

@@ -8,4 +8,7 @@
   @media screen and (max-width: 43.75em) {
     grid-template-columns: repeat(3, 1fr);
   }
+  @media screen and (max-width: 37.5em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

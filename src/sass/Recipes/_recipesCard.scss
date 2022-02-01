@@ -17,12 +17,10 @@
   }
 
   h4 {
-    // display: inline-block;
     padding: 0.5rem;
     margin-top: 2rem;
     line-height: 1.1;
-    // background: #fff;
-    // color: var(--color-dark-grey);
+
     font-size: 1.5rem;
   }
 
@@ -31,12 +29,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     margin: 0 auto;
-
-    // outline: 7px solid var(--color-dark-brown);
-    // outline-offset: 0.4rem;
-
     box-shadow: 0 0 0 5px #fff, 0 0 0 10px var(--color-dark-brown);
-    // outline-offset: 0.4rem;
 
     overflow: hidden;
 
@@ -64,8 +57,6 @@
     grid-template-columns: repeat(2, 1fr);
 
     justify-content: center;
-
-    // justify-items: centers;
 
     .svg {
       display: flex;

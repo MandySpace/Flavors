@@ -1,27 +1,29 @@
 .recipe-ins {
-  padding: 5rem 0;
-  display: flex;
-  justify-content: space-between;
+  padding: 5rem;
 
   h2 {
     margin: 0;
+    text-align: center;
+    margin-bottom: 5rem;
   }
 
-  ul {
-    width: max-content;
+  ol {
+    padding-left: 5rem;
+    // width: max-content;
   }
 
   li {
     max-width: 75ch;
-    margin-bottom: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
     font-size: 1.2rem;
     color: var(--color-text-black);
-  }
+    // text-align: center;
 
-  .cont {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 5rem;
+    @media screen and (max-width: 28.125em) {
+      margin: 0;
+      margin-bottom: 2rem;
+    }
   }
 }

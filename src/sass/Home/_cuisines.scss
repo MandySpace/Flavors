@@ -1,8 +1,16 @@
 .cuisine {
   width: 100%;
 
+  // @media screen and (max-width: 50em) {
+  //   padding-top: 10rem;
+  // }
+
   &-title {
     text-align: center;
+
+    @media screen and (max-width: 50em) {
+      padding: 0 5rem;
+    }
   }
 
   &-component {
@@ -30,12 +38,13 @@
     }
 
     @media screen and (max-width: 50em) {
-      width: 4rem;
-    }
-
-    @media screen and(max-width: 37.5em) {
       width: 6rem;
       padding: 3rem;
+    }
+
+    @media screen and (max-width: 37.5em) {
+      width: 4rem;
+      padding: 0.5rem;
     }
   }
 
@@ -49,6 +58,10 @@
     display: flex;
     justify-content: space-between;
     gap: 6rem;
+
+    @media screen and (max-width: 50em) {
+      gap: 3rem;
+    }
 
     @media screen and (max-width: 37.5em) {
       display: grid;

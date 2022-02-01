@@ -1,5 +1,5 @@
 .similar-recipes {
-  padding: 5rem 0;
+  padding: 5rem;
   padding-bottom: 15rem;
 
   h2 {
@@ -8,6 +8,13 @@
 
   .cont {
     display: flex;
+    justify-content: space-between;
     gap: 2rem;
+
+    @media screen and (max-width: 50em) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(150px, 200px));
+      justify-content: center;
+    }
   }
 }

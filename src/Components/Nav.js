@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { navHoverAnim } from "../animations";
 import { Link, useLocation } from "react-router-dom";
+import Hamburger from "./Hamburger";
 
 function Nav() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function Nav() {
             </motion.li>
           </ul>
         </div>
+        <Hamburger />
       </div>
     </header>
   );

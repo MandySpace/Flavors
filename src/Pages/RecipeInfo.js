@@ -18,7 +18,6 @@ function RecipeInfo() {
     });
 
     setRecipeInfo(data);
-    console.log(data);
   }, [params]);
 
   useEffect(() => fetchData(), [fetchData]);

@@ -16,6 +16,7 @@ function Hero() {
           alt="Sweet delicacies on a serving board with black background"
           className="img-cover"
         />
+        <div className="hero-overlay"></div>
       </div>
       <div className="hero-text max-width">
         <h1 className="hero-text-title">
@@ -25,9 +26,8 @@ function Hero() {
           Want to learn cooking or looking for a new recipe?
         </p>
         <p className="hero-text-subtext">
-          Lookup various recipes from different cuisines around the world which
-          are tailored to your needs. Get all the nutritional data about the
-          recipe so that you can make an informed decision.
+          Lookup various recipes from different cuisines and diets from around
+          the world which are tailored to your specific needs.
         </p>
         <button className="hero-text-cta btn-square" onClick={ctaHandler}>
           Let's do it
