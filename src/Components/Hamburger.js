@@ -18,7 +18,7 @@ function Hamburger() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { pathname } = useLocation();
 
-  const menuClickHandler = (e) => {
+  const menuClickHandler = () => {
     setIsMenuOpen(false);
   };
 
