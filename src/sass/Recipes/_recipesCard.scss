@@ -2,12 +2,14 @@
   cursor: pointer;
   flex: 1;
 
-  img {
+  .img-cover {
     width: 100%;
     border-radius: 50%;
     aspect-ratio: 1;
     will-change: transform;
     transition: transform 0.3s ease-out;
+    position: relative;
+    z-index: -1;
   }
 
   @media screen and (hover: hover) {
@@ -34,12 +36,12 @@
     overflow: hidden;
 
     backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
 
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
+    // -webkit-transform: translate3d(0, 0, 0);
+    // -moz-transform: translate3d(0, 0, 0);
 
     @media screen and (max-width: 93.75em) {
       box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--color-dark-brown);

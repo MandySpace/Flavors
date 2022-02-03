@@ -9,9 +9,11 @@ function Nav() {
   return (
     <header className={`header ${location.pathname === "/" ? "hero-nav" : ""}`}>
       <div className="container max-width">
-        <div className="circle flex-center">
-          <h1 className="logo">Flavors</h1>
-        </div>
+        <Link to="/">
+          <div className="circle flex-center">
+            <h1 className="logo">Flavors</h1>
+          </div>
+        </Link>
 
         <div className="nav">
           <ul className="nav-list">
@@ -31,14 +33,6 @@ function Nav() {
             >
               <Link to="/recipes">RECIPES</Link>
             </motion.li>
-            {/* <motion.li
-              variants={navHoverAnim}
-              initial="hidden"
-              whileHover="hover"
-              className="nav-item"
-            >
-              <Link to="/about-us">ABOUT US</Link>
-            </motion.li> */}
           </ul>
         </div>
         <Hamburger />

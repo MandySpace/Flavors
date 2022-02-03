@@ -6,17 +6,20 @@ import RecipeHeader from "../Components/RecipeInfo/RecipeHeader";
 import RecipeIngredients from "../Components/RecipeInfo/RecipeIngredients";
 import RecipeInstructions from "../Components/RecipeInfo/RecipeInstructions";
 import RelatedRecipes from "../Components/RecipeInfo/RelatedRecipes";
+import Spinner from "../Components/Spinner";
 
 function RecipeInfo() {
   const [recipeInfo, setRecipeInfo] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 
   const fetchData = useCallback(async () => {
+    setIsLoading(true);
     const data = await request(`recipes/${params["*"]}/information`, {
       id: params["*"],
       includeNutrition: true,
     });
-
+    setIsLoading(false);
     setRecipeInfo(data);
   }, [params]);
 
@@ -25,10 +28,17 @@ function RecipeInfo() {
   return (
     <>
       <Nav />
-      <RecipeHeader info={recipeInfo} />
-      <RecipeIngredients info={recipeInfo} />
-      <RecipeInstructions info={recipeInfo} />
-      <RelatedRecipes id={recipeInfo?.id} />
+
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <RecipeHeader info={recipeInfo} />
+          <RecipeIngredients info={recipeInfo} />
+          <RecipeInstructions info={recipeInfo} />
+          <RelatedRecipes id={recipeInfo?.id} />
+        </>
+      )}
     </>
   );
 }
